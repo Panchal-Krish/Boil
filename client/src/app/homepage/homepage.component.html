@@ -5,12 +5,15 @@
       <input type="text" placeholder="Search for a game..." class="search-input" [(ngModel)]="searchText">
       <button class="search-button" >Search</button>
     </div>
+ 
   </div>
-  
-  <div class="game-list">
+<br>
+  <div class="game-list" id="tarig">
     <div class="game" *ngFor="let game of games">
       <img [src]="game.image" alt="{{ game.name }}" class="game-image">
+      <a href="info">
       <h3 class="game-title">{{ game.name }}</h3>
-      <a href="info">hii</a>
+    </a>
     </div>
   </div>
+ 

@@ -1,17 +1,22 @@
 .navbar {
-    background-color: #333;
+  background: radial-gradient(circle, darkblue, darkred);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
   }
   
   .nav-button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
+    font-weight: bold;
   }
   
   .search-box {
@@ -25,6 +30,7 @@
     border-radius: 5px;
     margin-right: 10px;
     width: 200px;
+    font-size: 20px;
   }
   
   .search-button {
@@ -34,6 +40,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 20px;
   }
 
 
@@ -47,7 +54,7 @@
   .game {
     width: 250px; /* Set the width of each game */
     height: auto; /* Let the height adjust to content */
-    margin: 20px;
+    margin: 40px;
     overflow: hidden;
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack image and title vertically */
@@ -78,6 +85,14 @@
     box-sizing: border-box; /* Include padding in width calculation */
     text-align: center; /* Center text horizontally */
     white-space: normal; /* Allow text to wrap */
+    border-radius: 20px;
   }
+
+#tarig{
   
-  
+    /* Set the background color to black */
+    background: radial-gradient(circle, black, #32104f);
+    /* Set some fallback background color in case the gradient is not supported */
+  border-radius: 20px;
+
+}

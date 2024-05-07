@@ -11,7 +11,7 @@
     <p class="description">{{ games[0].desc }}</p>
 
     <!-- Storage details -->
-    <p>Storage: {{ games[0].storage }}</p>
+    <p id="size">Game Size: {{ games[0].storage }}</p>
 
     <!-- Download Game button -->
     <button class="button" (click)="downloadGame(games[0].downLink)">Download Game</button>

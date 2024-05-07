@@ -1,46 +1,49 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const routes = require("./routes/route");
+require("dotenv").config();
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Middleware
-app.use(express.json());
-app.use(cors());
+const connectionString = process.env.Mongo_Connection_String;
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/gamestore', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
+mongoose
+  .connect(connectionString)
+  .then(x => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
+  .catch(err => console.error('Error connecting to mongo', err));
+
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(cors());
+
+app.use(bodyParser.json());
+
+// For loggin on server for debugging
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
 });
 
-// Game model
-const Game = mongoose.model('Game', {
-  game_name: String,
-  game_image: String,
-  game_description: String,
-  game_storage: Number,
-  game_trailer_link: String,
-  game_download_link: String
+// Logging middleware for response
+app.use((req, res, next) => {
+  const start = Date.now();
+  const originalSend = res.send;
+  res.send = function (body) {
+    const resTime = Date.now() - start;
+    console.log(`[${new Date().toISOString()}] ${res.statusCode} ${req.method} ${req.url} res Time: ${resTime}ms res:`, body);
+    originalSend.call(this, body);
+  };
+  next();
 });
 
-// API endpoints
-app.get('/api/games', async (req, res) => {
-  try {
-    const games = await Game.find({}, 'game_name game_image game_storage');
-    res.json(games);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
+// To clear terminal
+console.clear();
+
+app.use("/", routes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -9,7 +9,6 @@ export class GameService {
     { name: 'Valorant', image: '../assets/images/valorant.jpeg', storage: '50gb', desc:'Chutiya Game', trailerLink:'https://www.youtube.com/watch?v=e_E9W2vsRbQ', downLink:'..//'  },
     { name: 'Call of duty MF-3', image: '../assets/images/Callofduty.jpeg',storage: '100gb', desc:'Chutiya Game', trailerLink:'..//', downLink:'..//' },
     { name: 'Phasmophobia', image: '../assets/images/Phasmophobia.jpeg',storage: '20gb',desc:'Chutiya Game', trailerLink:'..//', downLink:'..//' },
-
   ];
   constructor() { }
 }

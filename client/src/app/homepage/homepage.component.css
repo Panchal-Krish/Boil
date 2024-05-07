@@ -1,98 +1,115 @@
 .navbar {
-  background: radial-gradient(circle, darkblue, darkred);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
-  }
-  
-  .nav-button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .search-box {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 200px;
-    font-size: 20px;
-  }
-  
-  .search-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-  }
+  background: linear-gradient(to right,#380036, #0CBABA, darkblue);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.search-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
 
 
 
-  .game-list {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow games to wrap onto new lines */
-    justify-content: space-around; /* Distribute space between games */
-  }
-  
-  .game {
-    width: 250px; /* Set the width of each game */
-    height: auto; /* Let the height adjust to content */
-    margin: 40px;
-    overflow: hidden;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack image and title vertically */
-  }
-  
-  /* Other styles remain the same */
-  
+.game-list {
+  display: flex;
+  /* Use flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow games to wrap onto new lines */
+  justify-content: space-around;
+  /* Distribute space between games */
+}
 
-  .game-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+.game {
+  width: 250px;
+  /* Set the width of each game */
+  height: auto;
+  /* Let the height adjust to content */
+  margin: 40px;
+  overflow: hidden;
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Stack image and title vertically */
+}
 
-  
-  .game-image {
-    width: 100%; /* Ensure the image takes full width */
-    height: 70%; /* Set the height to occupy 70% of the container */
-    object-fit: cover; /* Ensure the entire image is covered */
-  }
-  
-  .game-title {
-    width: 100%; /* Ensure the title takes full width */
-    padding: 10px; /* Add padding */
-    font-size: 16px;
-    color: #fff; /* Adjust color to ensure visibility */
-    background-color: rgba(0, 0, 0, 0.5); /* Add background color for better readability */
-    box-sizing: border-box; /* Include padding in width calculation */
-    text-align: center; /* Center text horizontally */
-    white-space: normal; /* Allow text to wrap */
-    border-radius: 20px;
-  }
+/* Other styles remain the same */
 
-#tarig{
-  
-    /* Set the background color to black */
-    background: radial-gradient(circle, black, #32104f);
-    /* Set some fallback background color in case the gradient is not supported */
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.game-image {
+  width: 100%;
+  /* Ensure the image takes full width */
+  height: 70%;
+  /* Set the height to occupy 70% of the container */
+  object-fit: cover;
+  /* Ensure the entire image is covered */
+}
+
+.game-title {
+  width: 100%;
+  /* Ensure the title takes full width */
+  padding: 10px;
+  /* Add padding */
+  font-size: 16px;
+  color: #fff;
+  /* Adjust color to ensure visibility */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Add background color for better readability */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+  text-align: center;
+  /* Center text horizontally */
+  white-space: normal;
+  /* Allow text to wrap */
+  border-radius: 20px;
+}
+
+#tarig {
+
+  /* Set the background color to black */
+  background: linear-gradient(to bottom right,#380036, #0CBABA, darkblue);
+  /* Set some fallback background color in case the gradient is not supported */
   border-radius: 20px;
 
 }

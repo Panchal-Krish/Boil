@@ -39,7 +39,7 @@ img {
     /* Set font size */
     padding: 12px 24px;
     /* Add padding to the button */
-    background-color: #444;
+    background: linear-gradient(to right, darkblue, gray);
     /* Darker background color for button */
     color: #fff;
     /* White button text color */
@@ -58,7 +58,7 @@ img {
 
 /* Dark theme with gradient background */
 #div1 {
-    background: linear-gradient(to right, #000000, #434343);
+    background: linear-gradient(to right,#380036, black, darkblue);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -66,5 +66,5 @@ img {
 }
 
 #size {
-    font-size: 70px;
+    font-size: 50px;
 }

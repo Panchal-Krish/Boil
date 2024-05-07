@@ -1,0 +1,17 @@
+<div class="navbar">
+    <button class="nav-button">Home</button>
+    <button class="nav-button">My Library</button>
+    <button class="nav-button">Store</button>
+    <button class="nav-button">Community</button>
+    <div class="search-box">
+      <input type="text" placeholder="Search for a game..." class="search-input" [(ngModel)]="searchText">
+      <button class="search-button" >Search</button>
+    </div>
+  </div>
+  
+  <div class="game-list">
+    <div class="game" *ngFor="let game of games">
+      <img [src]="game.image" alt="{{ game.name }}" class="game-image">
+      <h3 class="game-title">{{ game.name }}</h3>
+    </div>
+  </div>

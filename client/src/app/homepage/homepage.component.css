@@ -1,0 +1,76 @@
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .search-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+
+
+  .game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .game {
+    position: relative;
+    width: 250px; /* Set the width of the game container */
+    height: 250px; /* Set the height of the game container */
+    margin: 20px;
+    overflow: hidden; /* Ensure overflow is hidden */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack image and title vertically */
+  }
+  
+  .game-image {
+    width: 100%; /* Ensure the image takes full width */
+    height: 70%; /* Set the height to occupy 70% of the container */
+    object-fit: cover; /* Ensure the entire image is covered */
+  }
+  
+  .game-title {
+    width: 100%; /* Ensure the title takes full width */
+    padding: 10px; /* Add padding */
+    font-size: 16px;
+    color: #fff; /* Adjust color to ensure visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Add background color for better readability */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center; /* Center text horizontally */
+    white-space: normal; /* Allow text to wrap */
+  }
+  
+  

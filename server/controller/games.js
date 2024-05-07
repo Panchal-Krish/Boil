@@ -46,6 +46,7 @@ const getGames = (req, res) => {
 
 const searchGame = (req, res) => {
     const game = req.params.game.toLowerCase();
+    console.log("Game: " + game);
 
     if (game == "") {
         gamesDBInstance

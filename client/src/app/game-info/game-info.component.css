@@ -1,0 +1,50 @@
+/* Dark theme */
+.game-info-container {
+    /* Dark background color */
+    color: #ddd; /* Light gray text color */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add border radius to create curved corners */
+  }
+  
+  /* Make image responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Limit the maximum height */
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Add margin below image */
+  }
+  
+  /* Make text bigger */
+  .description {
+    font-size: 20px; /* Increase font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Add margin below description */
+  }
+  
+  /* Style button */
+  .button {
+    font-size: 16px; /* Set font size */
+    padding: 12px 24px; /* Add padding to the button */
+    background-color: #444; /* Darker background color for button */
+    color: #fff; /* White button text color */
+    border: none;
+    border-radius: 20px; /* Make button curved */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  .button:hover {
+    background-color: #555; /* Darker button background color on hover */
+  }
+  /* Dark theme with gradient background */
+#div1{
+    background: linear-gradient(to right, #000000, #434343);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}

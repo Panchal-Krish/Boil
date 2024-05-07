@@ -17,13 +17,9 @@
 <br />
 <div class="game-list" id="tarig" *ngIf="games[0] != null">
   <div class="game" *ngFor="let game of games">
-    <img
-      [src]="game.image"
-      alt="{{ game.name | titlecase }}"
-      class="game-image"
-    />
+    <img [src]="game.image" alt="{{ game.name }}" class="game-image" />
     <a href="home" [routerLink]="['/home', game.name]">
-      <h3 class="game-title">{{ game.name }}</h3>
+      <h3 class="game-title">{{ game.name | titlecase }}</h3>
     </a>
   </div>
 </div>

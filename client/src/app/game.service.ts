@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Game } from './model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
-  games:Game[] = [
-    { name: 'Valorant', image: '../assets/images/valorant.jpeg', storage: '50gb', desc:'Chutiya Game', trailerLink:'https://www.youtube.com/watch?v=e_E9W2vsRbQ', downLink:'..//'  },
-    { name: 'Call of duty MF-3', image: '../assets/images/Callofduty.jpeg',storage: '100gb', desc:'Chutiya Game', trailerLink:'..//', downLink:'..//' },
-    { name: 'Phasmophobia', image: '../assets/images/Phasmophobia.jpeg',storage: '20gb',desc:'Chutiya Game', trailerLink:'..//', downLink:'..//' },
-  ];
-  constructor() { }
+  private baseURI = "http://localhost:8080/games";
+
+  constructor(private http: HttpClient) { }
+
+  getGamesList() {
+    return this.http.get<Game[]>(this.baseURI);
+  }
+
+  searchGame(game: string) {
+    return this.http.get<Game>(`${this.baseURI}/${game}`);
+  }
 }

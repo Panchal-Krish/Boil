@@ -1,17 +1,28 @@
 <div class="navbar">
   <button class="nav-button">Home</button>
-  <button class="nav-button">Community</button>
+  <a href="https://steamcommunity.com/" target="_blank">
+    <button class="nav-button">Community</button>
+  </a>
   <div class="search-box">
-    <input type="text" placeholder="Search for a game..." class="search-input" [(ngModel)]="searchText">
+    <input
+      type="text"
+      placeholder="Search for a game..."
+      class="search-input"
+      #searchField
+      (input)="searchGame(searchField.value)"
+    />
     <button class="search-button">Search</button>
   </div>
-
 </div>
-<br>
-<div class="game-list" id="tarig">
+<br />
+<div class="game-list" id="tarig" *ngIf="games[0] != null">
   <div class="game" *ngFor="let game of games">
-    <img [src]="game.image" alt="{{ game.name }}" class="game-image">
-    <a href="info">
+    <img
+      [src]="game.image"
+      alt="{{ game.name | titlecase }}"
+      class="game-image"
+    />
+    <a href="home" [routerLink]="['/home', game.name]">
       <h3 class="game-title">{{ game.name }}</h3>
     </a>
   </div>

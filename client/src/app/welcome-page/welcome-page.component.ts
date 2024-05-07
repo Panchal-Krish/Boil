@@ -9,5 +9,4 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './welcome-page.component.css'
 })
 export class WelcomePageComponent {
-
 }

@@ -1,23 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
 import { Game } from '../model';
-import { NgIf } from '@angular/common';
+import { NgIf, TitleCasePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game-info',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, TitleCasePipe],
   templateUrl: './game-info.component.html',
   styleUrl: './game-info.component.css'
 })
-export class GameInfoComponent implements OnInit{
-  games: Game[] = []
-  filteredGames:any =  [];
-  searchText: string = '';
-
-  constructor(private gameService:GameService) {
-    // this.filteredGames = [...this.games];
-  }
+export class GameInfoComponent implements OnInit {
+  constructor(private gameService: GameService, private route: ActivatedRoute) { }
 
   watchTrailer(trailerLink: string) {
     console.log('Trailer link:', trailerLink);
@@ -28,8 +23,13 @@ export class GameInfoComponent implements OnInit{
     // Open the download link in a new tab
     window.open(downloadLink, '_blank');
   }
+  game: Game | undefined;
 
   ngOnInit(): void {
-      this.games = this.gameService.games
+    const gameName = this.route.snapshot.paramMap.get("game");
+    console.log(gameName);
+
+    if (gameName)
+      this.gameService.searchGame(gameName).subscribe(resp => this.game = resp);
   }
 }

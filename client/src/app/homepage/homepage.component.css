@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(to right,#380036, #0CBABA, darkblue);
+  background: linear-gradient(to right, #380036, #0cbaba, darkblue);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -7,7 +7,6 @@
   border-radius: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
-
 }
 
 .nav-button {
@@ -34,7 +33,7 @@
 }
 
 .search-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -42,8 +41,6 @@
   cursor: pointer;
   font-size: 20px;
 }
-
-
 
 .game-list {
   display: flex;
@@ -69,13 +66,11 @@
 
 /* Other styles remain the same */
 
-
 .game-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 
 .game-image {
   width: 100%;
@@ -106,10 +101,8 @@
 }
 
 #tarig {
-
   /* Set the background color to black */
-  background: linear-gradient(to bottom right,#380036, #0CBABA, darkblue);
+  background: linear-gradient(to bottom right, #380036, #0cbaba, darkblue);
   /* Set some fallback background color in case the gradient is not supported */
   border-radius: 20px;
-
 }

@@ -12,5 +12,4 @@ import { GameInfoComponent } from "./game-info/game-info.component";
     imports: [RouterOutlet, HomepageComponent, HomepageComponent, WelcomePageComponent, GameInfoComponent]
 })
 export class AppComponent {
-  title = 'Boil';
 }

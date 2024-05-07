@@ -1,19 +1,22 @@
-<div id="div1">
-  <div *ngIf="games.length > 0" class="game-info-container">
+<div id="div1" *ngIf="game">
+  <div class="game-info-container">
     <!-- Displaying image of the first game -->
-    <img src="{{games[0].image}}" alt="Game Image">
+    <img src="{{ game.image }}" alt="Game Image" />
 
     <!-- Watch Trailer button -->
-    <button class="button" (click)="watchTrailer(games[0].trailerLink)">Watch Trailer</button>
-
+    <button class="button" (click)="watchTrailer(game.trailerLink)">
+      Watch Trailer
+    </button>
 
     <!-- Description of the first game -->
-    <p class="description">{{ games[0].desc }}</p>
+    <p class="description">{{ game.desc }}</p>
 
     <!-- Storage details -->
-    <p id="size">Game Size: {{ games[0].storage }}</p>
+    <p id="size">Game Size: {{ game.storage }}</p>
 
     <!-- Download Game button -->
-    <button class="button" (click)="downloadGame(games[0].downLink)">Download Game</button>
+    <button class="button" (click)="downloadGame(game.downLink)">
+      Download Game
+    </button>
   </div>
 </div>

@@ -4,7 +4,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(to top right, black, darkblue,darkgreen); /* Dark background color */
+  background: linear-gradient(
+    to top right,
+    black,
+    darkblue,
+    darkgreen
+  ); /* Dark background color */
 }
 
 .welcome-page h1 {
@@ -17,7 +22,7 @@
   display: inline-block;
   padding: 15px 40px; /* Increased padding for larger button */
   font-size: 1.8rem; /* Larger font size for button */
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   text-decoration: none; /* Remove default underline */
   border-radius: 20px; /* Curved background */
@@ -29,7 +34,7 @@
   background-color: #45a049;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }

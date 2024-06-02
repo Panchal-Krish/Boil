@@ -9,5 +9,4 @@ export const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'home/:game', component: GameInfoComponent },
   { path: "**", component: PageNotFoundComponent },
-  // Add other routes if necessary
 ];

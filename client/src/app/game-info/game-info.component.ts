@@ -20,7 +20,6 @@ export class GameInfoComponent implements OnInit {
   }
 
   downloadGame(downloadLink: string) {
-    // Open the download link in a new tab
     window.open(downloadLink, '_blank');
   }
   game: Game | undefined;
